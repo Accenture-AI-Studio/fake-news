@@ -20,6 +20,8 @@ user_text = st.text_area("Enter article text here:")
 
 def query(text):
     try: 
+        st.write("Calling URL:", API_URL)
+
         response = requests.post(API_URL, headers=headers, json={"inputs": text})
     except Exception as e:
         return {"error": str(e)}
