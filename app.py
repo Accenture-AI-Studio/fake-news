@@ -5,7 +5,7 @@ import json
 # Load model from HuggingFace
 MODEL = "ssva/my_finetuned_deberta"
 
-API_URL = f"https://router.huggingface.co/hf-inference/{MODEL}"
+API_URL = f"https://router.huggingface.co/hf-inference/models/{MODEL}"
 headers = {"Authorization": f"Bearer {st.secrets['HF_TOKEN']}"}
 
 
