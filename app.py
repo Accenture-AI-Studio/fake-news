@@ -6,6 +6,7 @@ import json
 MODEL = "ssva/my_finetuned_deberta"
 
 API_URL = f"https://router.huggingface.co/hf-inference/{MODEL}"
+headers = {"Authorization": f"Bearer {st.secrets['HF_TOKEN']}"}
 
 
 
@@ -18,7 +19,11 @@ user_title = st.text_input("Enter article title here:")
 user_text = st.text_area("Enter article text here:")
 
 def query(text):
-    response = requests.post(API_URL, json={"inputs": text})
+    try: 
+        response = requests.post(API_URL, headers=headers, json={"inputs": text})
+    except Exception as e:
+        return {"error": str(e)}
+    
    
     try:
         return response.json()
