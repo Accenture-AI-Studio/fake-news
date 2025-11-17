@@ -1,42 +1,55 @@
 import streamlit as st
-from transformers import AutoTokenizer, AutoModelForSequenceClassification
-import torch
+import requests
+import json
 
 # Load model from HuggingFace
-model_name = "ssva/my_finetuned_deberta"
+MODEL = "ssva/my_finetuned_deberta"
 
-tokenizer = AutoTokenizer.from_pretrained(model_name)
-model = AutoModelForSequenceClassification.from_pretrained(model_name)
+API_URL = f"https://api-inference.huggingface.co/models/{MODEL}"
+
 
 st.title("📰 Fake News Detector")
-st.write("Enter a news article and I will classify it as **TRUE** or **FAKE**.")
+st.write("Enter the **title** and **article text** and the model will classify whether the news is **TRUE** or **FAKE**.")
 
+
+#User inputs
+user_title = st.text_input("Enter article title here:")
 user_text = st.text_area("Enter article text here:")
 
+def query(text):
+    response = requests.post(API_URL, json={"inputs": text})
+   
+    try:
+        return response.json()
+    except:
+        return {"error": "Could not get a valid response from the model."}  
+    
+    
 if st.button("Classify"):
-    if user_text.strip() == "":
-        st.warning("Please enter some text.")
+    if user_text.strip() == "" or user_title.strip() == "":
+        st.warning("Please enter BOTH a title and some text.")
     else:
-        # Tokenize
-        encoding = tokenizer(
-            user_text,
-            truncation=True,
-            padding=True,
-            max_length=512,
-            return_tensors="pt"
-        )
+        combined_input = user_title+" "+ user_text
+        with st.spinner("Classifying..."):
+            result = query(combined_input)
+           
+            if "error" in result:
+                if "Loading" in result["error"]:
+                    st.info("The model is loading. This may take a while. Please try again in a few moments.")
+                else:
+                    st.error(result["error"])
+            else:
+                try:
+                    scores = result[0]
+                    prob_fake = scores[0]['score']
+                    prob_true = scores[1]['score']
+                    
+                    label = "TRUE" if prob_true > prob_fake else "FAKE"
+                    confidence = max(prob_true, prob_fake) 
+                    
+                    st.subheader(f"Prediction: {label}")
+                    st.write(f"Confidence: {confidence:.2%}")
+                except Exception as e:
+                    st.error("Error processing the model response.")
+                    st.write("Raw output", result)              
 
-        # Model prediction
-        with torch.no_grad():
-            output = model(**encoding)
-
-        logits = output.logits
-        probabilities = torch.softmax(logits, dim=1)
-        prob_fake = probabilities[0][0].item()
-        prob_true = probabilities[0][1].item()
-
-        label = "TRUE" if prob_true > prob_fake else "FAKE"
-        confidence = max(prob_true, prob_fake)
-
-        st.subheader(f"Prediction: **{label}**")
-        st.write(f"Confidence: **{confidence:.2%}**")
