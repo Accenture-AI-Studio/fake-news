@@ -30,7 +30,8 @@ if st.button("Classify"):
     if user_text.strip() == "" or user_title.strip() == "":
         st.warning("Please enter BOTH a title and some text.")
     else:
-        combined_input = user_title+" "+ user_text
+        combined_input = " [TITLE] " + user_title + " [ARTICLE] " + user_text
+
         with st.spinner("Classifying..."):
             result = query(combined_input)
            
