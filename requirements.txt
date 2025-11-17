@@ -1,0 +1,6 @@
+streamlit
+transformers==4.37.2
+torch==2.1.0
+sentencepiece
+protobuf
+accelerate
