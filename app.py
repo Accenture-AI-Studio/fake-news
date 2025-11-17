@@ -5,7 +5,8 @@ import json
 # Load model from HuggingFace
 MODEL = "ssva/my_finetuned_deberta"
 
-API_URL = f"https://api-inference.huggingface.co/models/{MODEL}"
+API_URL = f"https://router.huggingface.co/hf-inference/{MODEL}"
+
 
 
 st.title("📰 Fake News Detector")
