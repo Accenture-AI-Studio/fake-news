@@ -1,1 +1,1 @@
-# fake-news
+# Fake News Categorization - Accenture 
