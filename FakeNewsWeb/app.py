@@ -1,15 +1,24 @@
 import streamlit as st
-import requests
-import json
-
-# Load model from HuggingFace
-MODEL = "ssva/finetuned_deberta"
-
-API_URL = f"https://router.huggingface.co/hf-inference/models/{MODEL}"
-headers = {"Authorization": f"Bearer {st.secrets['HF_TOKEN']}"}
+import pickle
+import os
+import numpy as np
 
 
+# Load model from Files
+MODEL = "Models"
 
+
+
+def load_model():
+    with open(os.path.join(MODEL, "logistic_regression.pkl"), "rb") as f:
+        model = pickle.load(f)
+    with open(os.path.join(MODEL, "tfidf_vectorizer.pkl"), "rb") as f:
+        vectorizer = pickle.load(f)
+
+    return model, vectorizer
+
+model, vectorizer = load_model()
+    
 st.title("📰 Fake News Detector")
 st.write("Enter the **title** and **article text** and the model will classify whether the news is **TRUE** or **FAKE**.")
 
@@ -18,47 +27,23 @@ st.write("Enter the **title** and **article text** and the model will classify w
 user_title = st.text_input("Enter article title here:")
 user_text = st.text_area("Enter article text here:")
 
-def query(text):
-    try: 
-        st.write("Calling URL:", API_URL)
 
-        response = requests.post(API_URL, headers=headers, json={"inputs": text})
-    except Exception as e:
-        return {"error": str(e)}
-    
-   
-    try:
-        return response.json()
-    except:
-        return {"error": "Could not get a valid response from the model."}  
-    
     
 if st.button("Classify"):
     if not user_text.strip() or not user_title.strip():
         st.warning("Please enter BOTH a title and some text.")
     else:
         combined_input = " [TITLE] " + user_title + " [ARTICLE] " + user_text
-
-        with st.spinner("Classifying..."):
-            result = query(combined_input)
-           
-            if "error" in result:
-                if "Loading" in result["error"]:
-                    st.info("The model is loading. This may take a while. Please try again in a few moments.")
-                else:
-                    st.error(result["error"])
-            else:
-                try:
-                    scores = result[0]
-                    prob_fake = scores[0]['score']
-                    prob_true = scores[1]['score']
+        
+        X = vectorizer.transform([combined_input])
+        
+        probs = model.predict_proba(X)[0]
+        prob_fake = probs[0]
+        prob_true = probs[1]
+        label = "TRUE" if prob_true > prob_fake else "FAKE"
+        confidence = max(prob_true, prob_fake) 
                     
-                    label = "TRUE" if prob_true > prob_fake else "FAKE"
-                    confidence = max(prob_true, prob_fake) 
-                    
-                    st.subheader(f"Prediction: **{label}**")
-                    st.write(f"Confidence: **{confidence:.2%}**")
-                except Exception as e:
-                    st.error("Error processing the model response.")
-                    st.write("Raw output", result)              
+        st.subheader(f"Prediction: **{label}**")
+        st.write(f"Confidence: **{confidence:.2%}**")
+                     
 
