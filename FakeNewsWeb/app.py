@@ -5,16 +5,19 @@ import numpy as np
 
 
 # Load model from Files
-MODEL = "Models"
+MODELS_DIR = "Models"
 
 
 
 def load_model():
-    with open(os.path.join(MODEL, "logistic_regression.pkl"), "rb") as f:
+    model_path = os.path.join(MODELS_DIR, "logistic_regression.pkl")
+    
+    vectorizer_path = os.path.join(MODELS_DIR, "tfidf_vectorizer.pkl")
+    with open(model_path, "rb") as f:
         model = pickle.load(f)
-    with open(os.path.join(MODEL, "tfidf_vectorizer.pkl"), "rb") as f:
-        vectorizer = pickle.load(f)
 
+    with open(vectorizer_path, "rb") as f:
+        vectorizer = pickle.load(f)
     return model, vectorizer
 
 model, vectorizer = load_model()
