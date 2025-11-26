@@ -5,7 +5,8 @@ import numpy as np
 
 
 # Load model from Files
-MODELS_DIR = "Models"
+BASE_DIR = os.path.dirname(__file__)
+MODELS_DIR = os.path.join(BASE_DIR, "Models")
 
 
 
