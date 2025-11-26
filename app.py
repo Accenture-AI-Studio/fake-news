@@ -3,7 +3,7 @@ import requests
 import json
 
 # Load model from HuggingFace
-MODEL = "ssva/my_finetuned_deberta"
+MODEL = "ssva/finetuned_deberta"
 
 API_URL = f"https://router.huggingface.co/hf-inference/models/{MODEL}"
 headers = {"Authorization": f"Bearer {st.secrets['HF_TOKEN']}"}
@@ -34,7 +34,7 @@ def query(text):
     
     
 if st.button("Classify"):
-    if user_text.strip() == "" or user_title.strip() == "":
+    if not user_text.strip() or not user_title.strip():
         st.warning("Please enter BOTH a title and some text.")
     else:
         combined_input = " [TITLE] " + user_title + " [ARTICLE] " + user_text
@@ -56,8 +56,8 @@ if st.button("Classify"):
                     label = "TRUE" if prob_true > prob_fake else "FAKE"
                     confidence = max(prob_true, prob_fake) 
                     
-                    st.subheader(f"Prediction: {label}")
-                    st.write(f"Confidence: {confidence:.2%}")
+                    st.subheader(f"Prediction: **{label}**")
+                    st.write(f"Confidence: **{confidence:.2%}**")
                 except Exception as e:
                     st.error("Error processing the model response.")
                     st.write("Raw output", result)              
