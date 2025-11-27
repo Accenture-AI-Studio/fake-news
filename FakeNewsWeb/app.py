@@ -2,6 +2,7 @@ import streamlit as st
 import pickle
 import os
 import numpy as np
+from cleaning import full_clean_text
 
 
 # Load model from Files
@@ -37,7 +38,9 @@ if st.button("Classify"):
     if not user_text.strip() or not user_title.strip():
         st.warning("Please enter BOTH a title and some text.")
     else:
-        combined_input = " [TITLE] " + user_title + " [ARTICLE] " + user_text
+        clean_title = full_clean_text(user_title)
+        clean_text = full_clean_text(user_text)
+        combined_input = " [TITLE] " + clean_title + " [ARTICLE] " + clean_text
         
         X = vectorizer.transform([combined_input])
         
