@@ -24,9 +24,9 @@
 
 **Example:**
 
-- Built a three-model Fake News Detection System using  `[Logistic Regression]`, `[DeBERTa]`, and a `[GPT-3.5-turbo]` to evaluate credibility and classify articles as  `[TRUE]` or `[FAKE]`.
-- Achieved at least  `[~90%]` accuracy across all models, demonstrating strong performance and the potential for AI-driven misinformation detection solutions.
-- Generated actionable insights to inform business decisions at `[Accenture]`.
+- Built a three-model Fake News Detection System using  `Logistic Regression`, `DeBERTa`, and a `GPT-3.5-turbo` to evaluate credibility and classify articles as  `TRUE` or `FAKE`.
+- Achieved at least  `~90%` accuracy across all models, demonstrating strong performance and the potential for AI-driven misinformation detection solutions.
+- Generated actionable insights to inform business decisions at `Accenture`.
 - Implemented scalable ML techniques including traditional ML and transformers to address industry constraints or expectations.
 
 ---
