@@ -10,7 +10,7 @@
 
 | Name             | GitHub Handle | Contribution                                                             |
 |------------------|---------------|--------------------------------------------------------------------------|
-| Stephanie Argueta| @ssva179      | GPT model classifier, Streamlit App, Model Evaluation                    |
+| Stephanie Argueta| @ssva179      | GPT model development, Streamlit App, Model Evaluation                   |
 | Aditi Dheer      | @aditi-dheer  | Data collection, exploratory data analysis (EDA), dataset documentation  |
 | Amie Feng        | @amiefeng     | Model evaluation, performance analysis, results interpretation           |
 | Jibek Kelgenbaeva| @kjibek       | Model evaluation, performance analysis, results interpretation           |
@@ -24,10 +24,10 @@
 
 **Example:**
 
-- Developed a machine learning model using `[model type/technique]` to address `[challenge project task]`.
-- Achieved `[key metric or result]`, demonstrating `[value or impact]` for `[host company]`.
-- Generated actionable insights to inform business decisions at `[host company or stakeholders]`.
-- Implemented `[specific methodology]` to address industry constraints or expectations.
+- Built a three-model Fake News Detection System using  `[Logistic Regression]`, `[DeBERTa]`, and a `[GPT-3.5-turbo]` to evaluate credibility and classify articles as  `[TRUE]` or `[FAKE]`.
+- Achieved at least  `[~90%]` accuracy across all models, demonstrating strong performance and the potential for AI-driven misinformation detection solutions.
+- Generated actionable insights to inform business decisions at `[Accenture]`.
+- Implemented scalable ML techniques including traditional ML and transformers to address industry constraints or expectations.
 
 ---
 
