@@ -22,8 +22,6 @@
 
 ## 🎯 **Project Highlights**
 
-**Example:**
-
 - Built a three-model Fake News Detection System using  `Logistic Regression`, `DeBERTa`, and a `GPT-3.5-turbo` to evaluate credibility and classify articles as  `TRUE` or `FAKE`.
 - Achieved at least  `~90%` accuracy across all models, demonstrating strong performance and the potential for AI-driven misinformation detection solutions.
 - Generated actionable insights to inform business decisions at `Accenture`.
@@ -32,8 +30,10 @@
 ---
 
 ## 👩🏽‍💻 **Setup and Installation**
+To get started, clone the repository to your local machine:
 
-1. Clone the Repository
+- `git clone https://github.com/Accenture-AI-Studio/fake-news.git`
+- `cd fake-news`
 
 **Provide step-by-step instructions so someone else can run your code and reproduce your results. Depending on your setup, include:**
 
