@@ -1,4 +1,4 @@
-# Fake News Categorization - Accenture 
+# Fake News Categorization Using Machine Learning - Accenture 
 
 
 
@@ -10,12 +10,12 @@
 
 | Name             | GitHub Handle | Contribution                                                             |
 |------------------|---------------|--------------------------------------------------------------------------|
-| Stephanie Argueta| @taylornguyen | sldkjfnowvnwrovinwrovinwroivnsoivndwoivnweoinfweofinweolfnwlkncdl        |
-| Aditi Dheer      | @             | Data collection, exploratory data analysis (EDA), dataset documentation  |
-| Amie Feng        | @aminahassan  | Model evaluation, performance analysis, results interpretation           |
-| Jibek Kelgenbaeva| @pmehta       | Model evaluation, performance analysis, results interpretation           |
-| Zunaer Sharang   | @chrispark    | Model evaluation, performance analysis, results interpretation           |
-| Lipika Mukherjee (Advisor) | Model evaluation, performance analysis, results interpretation           |
+| Stephanie Argueta| @ssva179      | GPT model classifier, Streamlit App, Model Evaluation                    |
+| Aditi Dheer      | @aditi-dheer  | Data collection, exploratory data analysis (EDA), dataset documentation  |
+| Amie Feng        | @amiefeng     | Model evaluation, performance analysis, results interpretation           |
+| Jibek Kelgenbaeva| @kjibek       | Model evaluation, performance analysis, results interpretation           |
+| Zunaer Sharang   | @zunaersharang| Model evaluation, performance analysis, results interpretation           |
+| Lipika Mukherjee (Advisor) | @??? | Project Advising, Strategy, technical mentorship
 
 
 ---
