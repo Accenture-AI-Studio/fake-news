@@ -10,11 +10,14 @@
 
 | Name             | GitHub Handle | Contribution                                                             |
 |------------------|---------------|--------------------------------------------------------------------------|
-| Stephanie Argueta   | @taylornguyen | Data exploration, visualization, overall project coordination         |
-| Jordan Ramirez   | @jramirez     | Data collection, exploratory data analysis (EDA), dataset documentation  |
-| Amina Hassan     | @aminahassan  | Data preprocessing, feature engineering, data validation                 |
-| Priya Mehta      | @pmehta       | Model selection, hyperparameter tuning, model training and optimization  |
-| Chris Park       | @chrispark    | Model evaluation, performance analysis, results interpretation           |
+| Stephanie Argueta| @taylornguyen | sldkjfnowvnwrovinwrovinwroivnsoivndwoivnweoinfweofinweolfnwlkncdl        |
+| Aditi Dheer      | @             | Data collection, exploratory data analysis (EDA), dataset documentation  |
+| Amie Feng        | @aminahassan  | Model evaluation, performance analysis, results interpretation           |
+| Jibek Kelgenbaeva| @pmehta       | Model evaluation, performance analysis, results interpretation           |
+| Zunaer Sharang   | @chrispark    | Model evaluation, performance analysis, results interpretation           |
+| Lipika Mukherjee
+      (Advisor)     | (Advisor)     | Model evaluation, performance analysis, results interpretation           |
+
 
 ---
 
