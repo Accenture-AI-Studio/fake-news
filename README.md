@@ -33,6 +33,8 @@
 
 ## 👩🏽‍💻 **Setup and Installation**
 
+1. Clone the Repository
+
 **Provide step-by-step instructions so someone else can run your code and reproduce your results. Depending on your setup, include:**
 
 * How to clone the repository
