@@ -15,8 +15,7 @@
 | Amie Feng        | @aminahassan  | Model evaluation, performance analysis, results interpretation           |
 | Jibek Kelgenbaeva| @pmehta       | Model evaluation, performance analysis, results interpretation           |
 | Zunaer Sharang   | @chrispark    | Model evaluation, performance analysis, results interpretation           |
-| Lipika Mukherjee
-      (Advisor)     | (Advisor)     | Model evaluation, performance analysis, results interpretation           |
+| Lipika Mukherjee (Advisor) | Model evaluation, performance analysis, results interpretation           |
 
 
 ---
