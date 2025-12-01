@@ -10,7 +10,7 @@
 
 | Name             | GitHub Handle | Contribution                                                             |
 |------------------|---------------|--------------------------------------------------------------------------|
-| Stephanie Argueta| @ssva179      | GPT model development, Streamlit App, Model Evaluation                   |
+| Stephanie Argueta| @ssva179      | GPT model development and evaluation, Streamlit App, model training, results interpretation                    |
 | Aditi Dheer      | @aditi-dheer  | Data collection, exploratory data analysis (EDA), dataset documentation  |
 | Amie Feng        | @amiefeng     | DeBERTa model development & evaluation, performance analysis, model training, results interpretation           |
 | Jibek Kelgenbaeva| @kjibek       | Dataset cleaning, DeBERTa model development & evaluation, performance analysis, model training, results interpretation           |
