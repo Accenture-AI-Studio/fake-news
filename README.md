@@ -38,7 +38,7 @@ To get started, clone the repository to your local machine:
 - `git clone https://github.com/Accenture-AI-Studio/fake-news.git`
 - `cd fake-news`
 
-## **Set Up Python Environment**
+### **Set Up Python Environment**
 
 Create and activate a Python virtual Environment
 
@@ -53,20 +53,28 @@ Create and activate a Python virtual Environment
 **Install Dependencies**
 - `pip install -r requirements.txt`
 
-  
+### **Access the Dataset**
+The dataset used in this project is publicly avaliable on Kaggle
+Download the dataset from the link below and place the CSV files in the appropriate place.
 
+**Kaggle Dataset Link:**
+👉 https://www.kaggle.com/datasets/emineyetm/fake-news-detection-datasets/data
 
+### **Run Notebooks and Scripts**
+Launch Jupyter Notebook and navigate to the appropriate directory to begin analysis:
+- `juputer notebook`
 
+Then open the notebooks(e.g. Logistic_Regression_Model.ipynb, FakeNewsDetectionwithGPT.ipynb, Cleaned_Dataset_Deberta.ipynb) located in the repository. 
 
 ---
 
 ## 🏗️ **Project Overview**
 
-**Describe:**
+This project was conducted through the Break Through Tech AI Program as part of AI Studio. From September to December 2025, we collaborated on a Challenge Project presented by Accenture and concluded the project with a final presentation to company stakeholders.
 
-- How this project is connected to the Break Through Tech AI Program
-- Your AI Studio host company and the project objective and scope
-- The real-world significance of the problem and the potential impact of your work
+Our team’s objective was to build a binary classifier capable of labeling articles as true or fake and to evaluate the trustworthiness of each article using a customized trust score. To achieve this, we implemented multiple AI approaches, including traditional machine learning models, a transformer-based DeBERTa model, and a GPT classifier. 
+
+Effective misinformation detection has significant real-world relevance, as inaccurate information can influence public opinion, decision-making, and organizational risk. By developing these models this project demonstrates how AI can support stakeholders identify unreliable content and strengthen information integrity.
 
 ---
 
