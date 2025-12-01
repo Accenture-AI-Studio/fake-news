@@ -30,18 +30,33 @@
 ---
 
 ## 👩🏽‍💻 **Setup and Installation**
+> **Note:** All notebooks were originally developed in Google Colab. You can run them locally or open them directly in Colab for convenience.
+
+
 To get started, clone the repository to your local machine:
 
 - `git clone https://github.com/Accenture-AI-Studio/fake-news.git`
 - `cd fake-news`
 
-**Provide step-by-step instructions so someone else can run your code and reproduce your results. Depending on your setup, include:**
+## **Set Up Python Environment**
 
-* How to clone the repository
-* How to install dependencies
-* How to set up the environment
-* How to access the dataset(s)
-* How to run the notebook or scripts
+Create and activate a Python virtual Environment
+
+**On macOS/Linux:**
+- `python3 -m venv venv`
+- `source venv/bin/activate`
+
+**On Windows:**
+- `python3 -m venv venv`
+-  `venv\Scripts\activate`
+
+**Install Dependencies**
+- `pip install -r requirements.txt`
+
+  
+
+
+
 
 ---
 
