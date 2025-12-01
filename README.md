@@ -12,7 +12,7 @@
 |------------------|---------------|--------------------------------------------------------------------------|
 | Stephanie Argueta| @ssva179      | GPT model development, Streamlit App, Model Evaluation                   |
 | Aditi Dheer      | @aditi-dheer  | Data collection, exploratory data analysis (EDA), dataset documentation  |
-| Amie Feng        | @amiefeng     | Model evaluation, performance analysis, results interpretation           |
+| Amie Feng        | @amiefeng     | DeBERTa model development & evaluation, performance analysis, model training, results interpretation           |
 | Jibek Kelgenbaeva| @kjibek       | Model evaluation, performance analysis, results interpretation           |
 | Zunaer Sharang   | @zunaersharang| Model evaluation, performance analysis, results interpretation           |
 | Lipika Mukherjee (Advisor) | @??? | Project Advising, Strategy, technical mentorship
