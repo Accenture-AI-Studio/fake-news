@@ -95,13 +95,24 @@ Effective misinformation detection has significant real-world relevance, as inac
 
 ## 🧠 **Model Development**
 
-**You might consider describing the following (as applicable):**
+***We implemented and evaluated three models to approach fake news detection**
 
-* Model(s) used (e.g., CNN with transfer learning, regression models)
-* Feature selection and Hyperparameter tuning strategies
-* Training setup (e.g., % of data for training/validation, evaluation metric, baseline performance)
+**1. Logistic Regression(Baseline)**
+- TF-IDF vectorization of article text
+- Logistic Regression classifier implemented using scikit-learn
+- Served as a strong, interpretable baseline
+  
+**2. DeBERTa Transformer**
+- Fine-tuned a pre-trained DeBERTa model on the labeled dataset
+- Tokenization and batching performed using HuggingFace Transformers
+- Used embeddings to capture semantic relationships in text
+  
+**3. GPT-Based Prompt Approach**
+- Used GPT-3.5-turbo via API calls
+- Designed structured prompts to elicit credibility reasoning and classification
+- Explored LLM performance without direct parameter fine-tuning
 
-
+We evaliated all moders using standard evaluation metrics like accuracy and F1 scores to assess peformance and generalization.
 ---
 
 ## 📈 **Results & Key Findings**
