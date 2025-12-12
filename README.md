@@ -15,7 +15,7 @@
 | Amie Feng        | @amiefeng     | DeBERTa model development & evaluation, performance analysis, model training, results interpretation           |
 | Jibek Kelgenbaeva| @kjibek       | Dataset cleaning, DeBERTa model development & evaluation, performance analysis, model training, results interpretation           |
 | Zunaer Sharang   | @zunaersharang| Model evaluation, performance analysis, results interpretation           |
-| Lipika Mukherjee (Advisor) | @??? | Project Advising, Strategy, technical mentorship
+
 
 
 ---
