@@ -127,7 +127,7 @@ We evaliated all moders using standard evaluation metrics like accuracy and F1 s
 
 **Model Comparisons:**
 
-![Evaluation Metrics](images/evaluations.png)
+![Evaluation Metrics](image.png)
 
 ---
 
