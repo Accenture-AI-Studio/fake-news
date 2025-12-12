@@ -136,6 +136,13 @@ We evaliated all moders using standard evaluation metrics like accuracy and F1 s
 - Diversify training data by incorporating additional datasets (include broader sources, stylistic writing, time period, and news topics) to increase fact-checking and decrease leakage and improve overall generalization. 
 - Find weaknesses in our models by performing in-depth error checking and reasoning. 
 
+---
+## 👾 **TRY OUR DEMO**
+- Try our interactive website, where you can paste an article and see how our model will classify it.  
+
+👉 [Live Demo](https://fake-newss.streamlit.app)
+
+![Demo Website](web.png) 
 
 ---
 
@@ -145,7 +152,7 @@ This project is licensed under the MIT License.
 
 ---
 
-## 📄 **References** z
+## 📄 **References** 
 Kaggle Fake News Dataset: (https://www.kaggle.com/datasets/emineyetm/fake-news-detection-datasets/data)
 
 
