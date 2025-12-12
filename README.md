@@ -160,5 +160,5 @@ Kaggle Fake News Dataset: (https://www.kaggle.com/datasets/emineyetm/fake-news-d
 
 ## 🙏 **Acknowledgements** 
 
-We would like to thank our Break Through Tech AI Studio Coach Vasu Kaker and Challenge Advisor Mukherjee from Accenture for their guidance and feedback throughout the project, as well as other industry professionals who provided valuable context and evaluation during project reviews.
+We would like to thank our Break Through Tech AI Studio Coach Vasu Kaker and Challenge Advisor Lipika Mukherjee from Accenture for their guidance and feedback throughout the project, as well as other industry professionals who provided valuable context and evaluation during project reviews.
 
