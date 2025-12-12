@@ -111,50 +111,48 @@ Effective misinformation detection has significant real-world relevance, as inac
 - Used GPT-3.5-turbo via API calls
 - Designed structured prompts to elicit credibility reasoning and classification
 - Explored LLM performance without direct parameter fine-tuning
-
+  
 We evaliated all moders using standard evaluation metrics like accuracy and F1 scores to assess peformance and generalization.
+
 ---
 
 ## 📈 **Results & Key Findings**
 
-**You might consider describing the following (as applicable):**
+-Findings suggest that AI can reliably support automated moderation and flag misleading articles. 
+- All three models achieved strong classification performance, with accuracy and F1 scores consistently around or above ~90%.
+- The Logistic Regression model served as a strong and interpretable baseline, demonstrating that traditional ML techniques remain competitive for text classification tasks. (~99%)
+- The fine-tuned DeBERTa model showed the most stable generalization across article types, benefiting from contextual language representations.  (~99%)
+- The GPT-based prompt approach demonstrated promising reasoning capabilities, but exhibited higher difference in predictions compared to the fine-tuned models. (~90%)
+- Model performance was strongly influenced by the characteristics of the training dataset, highlighting the importance of data quality and curation when building specialized classifiers, which we attribute to the very high accuracy.
 
-* Performance metrics (e.g., Accuracy, F1 score, RMSE)
-* How your model performed
-* Insights from evaluating model fairness
+**Model Comparisons:**
 
-**Potential visualizations to include:**
-
-* Confusion matrix, precision-recall curve, feature importance plot, prediction distribution, outputs from fairness or explainability tools
+![Evaluation Metrics](images/evaluations.png)
 
 ---
 
 ## 🚀 **Next Steps**
 
-**You might consider addressing the following (as applicable):**
+- Diversify training data by incorporating additional datasets (include broader sources, stylistic writing, time period, and news topics) to increase fact-checking and decrease leakage and improve overall generalization. 
+- Find weaknesses in our models by performing in-depth error checking and reasoning. 
 
-* What are some of the limitations of your model?
-* What would you do differently with more time/resources?
-* What additional datasets or techniques would you explore?
 
 ---
 
 ## 📝 **License**
 
-If applicable, indicate how your project can be used by others by specifying and linking to an open source license type (e.g., MIT, Apache 2.0). Make sure your Challenge Advisor approves of the selected license type.
-
-**Example:**
 This project is licensed under the MIT License.
 
 ---
 
 ## 📄 **References** (Optional but encouraged)
 
-Cite relevant papers, articles, or resources that supported your project.
+Kaggle Fake News Dataset: (https://www.kaggle.com/datasets/emineyetm/fake-news-detection-datasets/data)
+
 
 ---
 
 ## 🙏 **Acknowledgements** (Optional but encouraged)
 
-Thank your Challenge Advisor, host company representatives, TA, and others who supported your project.
+We would like to thank our Break Through Tech AI Studio Coach Vasu Kaker and Challenge Advisor Mukherjee from Accenture for their guidance and feedback throughout the project, as well as other industry professionals who provided valuable context and evaluation during project reviews.
 
