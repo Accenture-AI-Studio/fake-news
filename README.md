@@ -1,4 +1,4 @@
-# Fake News Categorization Using Machine Learning - Accenture 
+# Fake News Categorization Using Machine Learning 
 
 
 
