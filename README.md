@@ -141,14 +141,19 @@ To better understand the dataset and prepare it for modeling, we performed explo
 
   
 **2. DeBERTa Transformer**
-- Fine-tuned a pre-trained DeBERTa model on the labeled dataset
-- Tokenization and batching performed using HuggingFace Transformers
-- Used embeddings to capture semantic relationships in text
+- Converted dataset into a **Hugging Face** `Dataset` format to enable efficient preprocessing and integration with the Transformers training pipelline. 
+- Split the dataset into training (`75%`) and evaluation (`25%`) sets to evaluate performance and how it generalizes on unseen data. 
+- Applied strong regularization through weight decay (`0.3`) to penalize over-reliance on any single feature, which is especially important for preventing overfitting in transformer models.
+- This DeBERTa approach achieved strong performance, demonstrating the ability of a transformer to capture semantic and contextual information beyond surface-level word features.
+- Served as a state-of-the-art comparison model, highlighting the trade-offs between model complexity, interpretability, and performance relative to the Logistic Regression baseline.
+
   
 **3. GPT-Based Prompt Approach**
-- Used GPT-3.5-turbo via API calls
-- Designed structured prompts to elicit credibility reasoning and classification
-- Explored LLM performance without direct parameter fine-tuning
+- Implemented a prompt-based classification approach using **GPT-3.5-Turbo** accessed through the OpenAI API, treating fake news detection as a natural-language reasoning task rather than a traditional supervised learning problem
+-  Designed structured prompts to elicit credibility reasoning and final classification decisions. 
+- Evaluated the performance of a general purpose, pre-trained LLM without specific fine tuning or direct access to training data, relying on prompt design to determine the model's behavior.
+- The GPT model served to provide valuable insights into how a generalized LLM works with a more specific classification task.
+- Served as a comparison model, illustrating the trade-offs between easy deployment, transparency, and performance compared to fine-tuned and feature-engineered approaches.
   
 We evaliated all moders using standard evaluation metrics like accuracy and F1 scores to assess peformance and generalization.
 
@@ -180,7 +185,7 @@ We evaliated all moders using standard evaluation metrics like accuracy and F1 s
 
 👉 [Live Demo](https://fake-newss.streamlit.app)
 
-![Demo Website](web.png) 
+![Demo Website](assets/web.png) 
 
 ---
 
