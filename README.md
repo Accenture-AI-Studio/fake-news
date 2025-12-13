@@ -57,8 +57,8 @@ Create and activate a Python virtual Environment
 The dataset used in this project is publicly avaliable on Kaggle
 Download the dataset from the link below and place the CSV files in the appropriate place.
 
-**Kaggle Dataset Link:**
-👉 https://www.kaggle.com/datasets/emineyetm/fake-news-detection-datasets/data
+**🔗 Kaggle Dataset Link:**
+ [https://www.kaggle.com/datasets/emineyetm/fake-news-detection-datasets/data](https://www.kaggle.com/datasets/emineyetm/fake-news-detection-datasets/data)
 
 ### **Run Notebooks and Scripts**
 Launch Jupyter Notebook and navigate to the appropriate directory to begin analysis:
@@ -80,16 +80,50 @@ Effective misinformation detection has significant real-world relevance, as inac
 
 ## 📊 **Data Exploration**
 
-**You might consider describing the following (as applicable):**
+### Dataset
+We use the **Fake News Detection Datasets** from Kaggle, which consists of two separate CSV files:
 
-* The dataset(s) used: origin, format, size, type of data
-* Data exploration and preprocessing approaches
-* Insights from your Exploratory Data Analysis (EDA)
-* Challenges and assumptions when working with the dataset(s)
+- `True.csv` — verified news articles  
+- `Fake.csv` — fabricated or misleading news articles  
 
-**Potential visualizations to include:**
+Each file contains news article text and metadata, with labels inferred from the source file.
 
-* Plots, charts, heatmaps, feature visualizations, sample dataset images
+![Data Card](assets/Kaggle%20Data%20Card.png)
+
+---
+### Data Understanding & Preprocessing
+To better understand the dataset and prepare it for modeling, we performed exploratory data analysis (EDA) focusing on text characteristics and label distribution:
+
+- **Class Distribution:**  
+  We examined the number of articles in `true.csv` versus `fake.csv` to assess class balance.
+
+- **Text Length Analysis:**  
+  We analyzed:
+  - Word count distributions  
+  - Character length distributions  
+  These features help highlight stylistic differences between real and fake news articles.
+
+![Distributions](assets/distributions.png)
+
+- **Sample Inspection:**  
+  Representative examples from both true and fake news were reviewed to qualitatively compare tone, structure, and writing style.
+  
+  **Example of a True News Article**  
+  The following screenshot shows a verified news article from `True.csv`.
+
+  ![True News Example](assets/true.png)
+
+  **Example of a Fake News Article**  
+  The following screenshot shows a fabricated or misleading article from `Fake.csv`.
+
+  ![Fake News Example](assets/fake.png)
+
+---
+
+### Key EDA Insights
+- Fake news articles tend to be **shorter** and more **sensational**, while true news articles are generally **longer and more structured**.  
+- The dataset is relatively balanced, with minor class imbalance that can be handled during training.  
+- Text length alone is insufficient for reliable classification, motivating the use of NLP-based models.
 
 ---
 
@@ -97,10 +131,14 @@ Effective misinformation detection has significant real-world relevance, as inac
 
 ***We implemented and evaluated three models to approach fake news detection***
 
-**1. Logistic Regression(Baseline)**
-- TF-IDF vectorization of article text
-- Logistic Regression classifier implemented using scikit-learn
-- Served as a strong, interpretable baseline
+**1. Baseline Model: Logistic Regression**
+
+- Implemented a strong and interpretable baseline using **TF-IDF vectorization** of the article text combined with a **Logistic Regression classifier** from *scikit-learn*.
+- Text was transformed into high-dimensional feature vectors using TF-IDF, capturing both term importance and frequency patterns across articles.
+- The **regularization strength (`C`)** of the Logistic Regression model was **tuned using GridSearchCV**, optimizing performance via cross-validation.
+- This approach achieved **excellent performance**, serving as a robust benchmark for more complex models.
+- Despite its simplicity, this model demonstrated that well-engineered text features combined with careful hyperparameter tuning can yield near state-of-the-art results, making it a strong baseline for comparison against transformer-based approaches.
+
   
 **2. DeBERTa Transformer**
 - Fine-tuned a pre-trained DeBERTa model on the labeled dataset
