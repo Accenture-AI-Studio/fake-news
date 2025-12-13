@@ -14,7 +14,7 @@
 | Aditi Dheer      | @aditi-dheer  | Data collection, exploratory data analysis (EDA), dataset documentation, **Logistic Regression** model development & evaluation, performance analysis, model training, results interpretation  |
 | Amie Feng        | @amiefeng     | DeBERTa model development & evaluation, performance analysis, model training, results interpretation           |
 | Jibek Kelgenbaeva| @kjibek       | Dataset cleaning, DeBERTa model development & evaluation, performance analysis, model training, results interpretation           |
-| Zunaer Sharang   | @zunaersharang| Model evaluation, performance analysis, results interpretation           |
+| Zunaer Sharang   | @zunaersharang| Dataset cleaning, preprocessing pipeline, tokenization          |
 
 
 
