@@ -95,7 +95,7 @@ Effective misinformation detection has significant real-world relevance, as inac
 
 ## 🧠 **Model Development**
 
-***We implemented and evaluated three models to approach fake news detection**
+***We implemented and evaluated three models to approach fake news detection***
 
 **1. Logistic Regression(Baseline)**
 - TF-IDF vectorization of article text
