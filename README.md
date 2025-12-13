@@ -118,7 +118,7 @@ We evaliated all moders using standard evaluation metrics like accuracy and F1 s
 
 ## 📈 **Results & Key Findings**
 
--Findings suggest that AI can reliably support automated moderation and flag misleading articles. 
+- Findings suggest that AI can reliably support automated moderation and flag misleading articles. 
 - All three models achieved strong classification performance, with accuracy and F1 scores consistently around or above ~90%.
 - The Logistic Regression model served as a strong and interpretable baseline, demonstrating that traditional ML techniques remain competitive for text classification tasks. (~99%)
 - The fine-tuned DeBERTa model showed the most stable generalization across article types, benefiting from contextual language representations.  (~99%)
